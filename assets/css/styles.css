@@ -6,14 +6,14 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --hue: 174;
+
   --sat: 63%;
   --first-color: hsl(var(--hue), var(--sat), 40%);
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 8%, 35%);
   --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #FFF;
+  --container-color: #9736c816;
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -38,11 +38,22 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-image: url('/img/background3.jpg');
+}
+
+.background-image {
+  background-image: url('/UniWork/img/background6.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  z-index: -1; /* Set the desired z-index for the background image */
 }
+
+/* #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+} */
 
 html {
   scroll-behavior: smooth;
@@ -115,6 +126,7 @@ img {
 .nav__img {
   width: 32px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .nav__logo{
@@ -126,13 +138,15 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  cursor: pointer;
+  margin-left: -35px;
   
 }
 .logo_img img{
   width: 16vh;
   max-width: 100%;
   margin-right: -19px;
-  margin-top: 15px;
+  margin-top:auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -150,6 +164,12 @@ img {
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: .4s;
+  }
+  .logo_img img{
+    width: 14vh;
+  }
+  .logo_img{
+    margin-left: -35px;
   }
 }
 
@@ -246,7 +266,7 @@ img {
   }
   .nav__name {
     font-size: var(--normal-font-size);
-    /* display: block; */ /* Minimalist design, visible labels */
+    display: block; /* Minimalist design, visible labels */
   }
   .nav__link:hover {
     color: var(--first-color);
@@ -264,9 +284,9 @@ img {
   }
 
   /* Minimalist design */
-  /* .active-link::before{
+  .active-link::before{
       bottom: -.75rem;
-  } */
+  }
 }
 
 /* For large devices */
@@ -276,3 +296,44 @@ img {
     margin-right: auto;
   }
 }
+
+/* get start button */
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #e6b70b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ }
+ 
+ button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ button:hover span {
+  padding-right: 15px;
+ }
+ 
+ button:hover span:after {
+  opacity: 1;
+  right: 0;
+ }

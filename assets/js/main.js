@@ -1,8 +1,8 @@
 // preloader
 
-var preloader = document.getElementById('loading');
+var preloader = document.getElementById('preloader');
 function myFunction(){
-    // preloader.style.display = 'none';
+    preloader.style.display = 'none';
 }
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

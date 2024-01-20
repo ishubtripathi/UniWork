@@ -7,13 +7,12 @@
 
   /*========== Colors ==========*/
 
-  --sat: 63%;
   --first-color: hsl(var(--hue), var(--sat), 40%);
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 8%, 35%);
   --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #9736c816;
+  --container-color: #9736c825;
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -40,20 +39,28 @@
   margin: 0;
 }
 
+/* #preloader{
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  z-index: 100;
+} */
+
 .background-image {
-  background-image: url('/UniWork/img/background6.png');
+  background-image: url('/UniWork/img/background3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  z-index: -1; /* Set the desired z-index for the background image */
+  z-index: -1;
 }
 
-/* #particles-js {
-  position: absolute;
+#particles-js {
   width: 100%;
   height: 100%;
-  z-index: -1; 
-} */
+  z-index: -2;
+}
 
 html {
   scroll-behavior: smooth;
@@ -101,6 +108,8 @@ img {
   max-width: 1390px;
   margin-left: 1.5rem;
   margin-right: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 /*=============== HEADER ===============*/
@@ -159,7 +168,6 @@ img {
     width: 100%;
     height: 4rem;
     padding: 0;
-    background-color: var(--first-color);
     display: grid;
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
@@ -167,10 +175,24 @@ img {
   }
   .logo_img img{
     width: 14vh;
+    transition: .4s;
   }
   .logo_img{
     margin-left: -35px;
+    transition: .4s;
   }
+  button {
+    position: fixed;
+    top: .2rem;
+    right: 1rem;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: var(--z-fixed);
+  }
+  
 }
 
 .nav__list, 
@@ -184,11 +206,12 @@ img {
   row-gap: 4px;
   /* color: var(--title-color); */
   color: white;
-  font-weight: 600;
+  margin: 10px auto;
 }
 
 .nav__list {
   justify-content: space-around;
+  margin-right: 2rem;
 }
 
 .nav__name {
@@ -234,11 +257,11 @@ img {
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 /* Remove if you choose, the minimalist design */
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .nav__name {
     display: none;
   }
-} */
+}
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -300,19 +323,19 @@ img {
 /* get start button */
 button {
   display: inline-block;
-  border-radius: 4px;
-  background-color: #e6b70b;
-  border: none;
-  color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #e6b70b;
+  background: none;
+  color: wheat;
   text-align: center;
-  font-size: 17px;
-  padding: 16px;
-  width: 130px;
+  font-size: 14px; /* Adjusted font size */
+  padding: 7px 15px; /* Adjusted padding for better proportions */
+  width: auto;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
  }
- 
+
  button span {
   cursor: pointer;
   display: inline-block;

@@ -12,8 +12,12 @@
 
         <title>Uniwork</title>
     </head>
-    <body class="background-image"></body>
-        <div id="particles-js"></div>
+    <!-- <body>
+        <div id="preloader"></div>
+    </body> -->
+    <body class="background-image" onload="myFunction()">
+        <div id="particles-js"></div>    
+        <!-- <div id="particles-js"></div> -->
             <!--=============== HEADER ===============-->
             <header class="header" id="header">
                 <nav class="nav container">
@@ -53,15 +57,26 @@
                                     <span class="nav__name">Contactme</span>
                                 </a>
                             </li>
+                            <button>
+                                <span>Get Started</span>
+                              </button>
                         </ul>
                         
                     </div>
-                    <img src="/UniWork/assets/img/perfil.png" alt="" class="nav__img">
                 </nav>
             </header>
             <main>
                 <!--=============== HOME ===============-->
-                <section class="container section section__height" id="home">          
+                <section class="container section section__height" id="home">
+                    <div class="home-content">
+                        <h4>Welcome to UniWork!</h4>
+                        <h1>Where Every Creation Earn, <span>Its Digital Signature</span></h1>
+                        <p>We are providing you the gateway to the digital art realm, where each creation receives a unique digital signature through our NFT authentication. Empower your work with individuality on our digital legacy.</p>
+                    </div>
+                    <div class="home-image">
+                        <img src="./img/NFT.gif" alt="NFT image">
+                    </div>
+                    <div id="particles-js"></div>           
                 </section>
                 <!--=============== ABOUT ===============-->
                 <section class="container section section__height" id="about">

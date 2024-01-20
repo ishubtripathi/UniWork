@@ -1,3 +1,10 @@
+// preloader
+
+var preloader = document.getElementById('loading');
+function myFunction(){
+    // preloader.style.display = 'none';
+}
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 

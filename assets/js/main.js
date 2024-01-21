@@ -34,4 +34,40 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-// login logic
+// scroll
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    function handleScroll() {
+      const scrollPosition = window.scrollY;
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          section.style.zIndex = sections.length - index;
+        } else {
+          section.style.zIndex = 1;
+        }
+      });
+    }
+    window.addEventListener("scroll", handleScroll);
+  });
+  // Add an event listener to the window for scroll events
+window.addEventListener('scroll', function () {
+  // Get the scroll position
+  var scrollPosition = window.scrollY;
+
+  // Get the height of the home section
+  var homeHeight = document.getElementById('home').offsetHeight;
+
+  // Check if the scroll position is greater than the height of the home section
+  if (scrollPosition > homeHeight) {
+    // Add the fixed-home class to the body
+    document.body.classList.add('fixed-home');
+  } else {
+    // Remove the fixed-home class from the body
+    document.body.classList.remove('fixed-home');
+  }
+});
+
+

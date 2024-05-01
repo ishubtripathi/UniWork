@@ -1,3 +1,50 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+label {
+    color: #fff; /* Set text color to white */
+}
+input[type="file"] {
+    display: inline;
+    color: #fff;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* NFT.css */
 @import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
 
 *{
@@ -12,11 +59,9 @@ html {
 }
 
 body{
-    /* background-color: #5b6677; */
-    background: url('/images/background/Bg1.png');
+    background: url('images/background/Bg1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: linear-gradient(to left, #490077, #51007d, #590182, #620188, #6a018d); */
 }
 
 .container{
@@ -98,7 +143,6 @@ body{
 .menu ul li > a:hover,
 .menu ul li.active > a{
     color: #000;
-    /* background-color: #e40c0c; */
 }
 
 .menu ul li .icon{
@@ -223,17 +267,8 @@ body{
 }
 
 .sidebar.active .menu .sub-menu{
-    position: absolute;
-    top: 0;
-    left: 2rem;
-    width: 20rem;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    border: 0.1rem solid #f6f6f6;
-    background-color: #fff;
-    box-shadow: 0px 1rem 0.8rem rgba(0, 0, 0, 0.1);
+    position: absolute
 }
-
 /* Media Query for devices with max-width of 768px */
 @media (max-width: 76.8rem) {
     .sidebar {

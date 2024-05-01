@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create NFT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Create NFT</h1>
+    </header>
+    <main>
+        <form id="createNFTForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .txt" required>
+            <!-- Allow images (.jpg, .jpeg, .png, .gif), PDFs, Word documents, and text files -->
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="-select category-">-select category-</option>
+                <option value="art">Art</option>
+                <option value="music">Music</option>
+                <option value="collectibles">Collectibles</option>
+                <option value="gaming">Gaming</option>
+                <option value="real_estate">Real Estate</option>
+                <option value="fashion">Fashion</option>
+                <option value="memes">Memes</option>
+                <option value="literature">Literature</option>
+            </select>
+            
+            <button type="submit">Create NFT</button>
+        </form>
+        <div id="message"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Uniwork. All rights reserved.</p>
+    </footer>
+    <script src="NFT.js"></script>
+</body>
+</html>

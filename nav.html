@@ -9,95 +9,97 @@
     <title>Sidebar</title>
   </head>
   <body>
-    <div class="container">
-        <div class="sidebar active">
-            <div class="menu-btn">
-                <i class="ph-bold ph-caret-left"></i>
-            </div>
-            <div class="head">
-                <div class="user-img">
-                    <img src="/images/nav/user.jpg" alt="user">
+    <!-- particle ja -->
+    <div id="particles-js"></div>
+    <!-- rest of the code -->
+        <div class="container">
+            <div class="sidebar active">
+                <div class="menu-btn">
+                    <i class="ph-bold ph-caret-left"></i>
                 </div>
-                <div class="user-details">
-                    <p class="userId">@ishubtripathi</p>
-                    <p class="name">Shubh Tripathi</p>
+                <div class="head">
+                    <div class="user-img">
+                        <img src="/images/nav/user.jpg" alt="user">
+                    </div>
+                    <div class="user-details">
+                        <p class="userId">@ishubtripathi</p>
+                        <p class="name">Shubh Tripathi</p>
+                    </div>
                 </div>
-            </div>
-            <div class="nav">
+                <div class="nav">
+                    <div class="menu">
+                        <p class="title">Main</p>
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                    <i class="icon ph-bold ph-house-simple"></i>
+                                    <span class="text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-user"></i>
+                                    <span class="text">Audience</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <span class="text">User</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="text">Subscriber</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-text"></i>
+                                    <span class="text">Posts</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    <i class="icon ph-bold ph-chart-bar"></i>
+                                    <span class="text">Income</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <p class="title">Settings</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-gear"></i>
+                                    <span class="text">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="menu">
-                    <p class="title">Main</p>
+                    <p class="title">Account</p>
                     <ul>
-                        <li class="active">
+                        <li>
                             <a href="#">
-                                <i class="icon ph-bold ph-house-simple"></i>
-                                <span class="text">Dashboard</span>
+                                <i class="icon ph-bold ph-info"></i>
+                                <span class="text">Help</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="icon ph-bold ph-user"></i>
-                                <span class="text">Audience</span>
-                                <i class="arrow ph-bold ph-caret-down"></i>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="#">
-                                        <span class="text">User</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="text">Subscriber</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="active">
-                            <a href="#">
-                                <i class="icon ph-bold ph-file-text"></i>
-                                <span class="text">Posts</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="#">
-                                <i class="icon ph-bold ph-chart-bar"></i>
-                                <span class="text">Income</span>
+                                <i class="icon ph-bold ph-sign-out"></i>
+                                <span class="text">Logout</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="menu">
-                    <p class="title">Settings</p>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="icon ph-bold ph-gear"></i>
-                                <span class="text">Settings</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="menu">
-                <p class="title">Account</p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="icon ph-bold ph-info"></i>
-                            <span class="text">Help</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon ph-bold ph-sign-out"></i>
-                            <span class="text">Logout</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
-    </div>
-    
 
     <!-- jquery -->
     <script
@@ -106,5 +108,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="/particle/particles.js"></script>
+    <script src="/particle/app.js"></script>
   </body>
 </html>

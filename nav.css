@@ -47,7 +47,8 @@ section::before {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #1c0522, transparent);
+  /* background: linear-gradient(to top, #1c0522, transparent); */
+  background: linear-gradient(to top, #000000, transparent);
   z-index: 22;
 }
 
@@ -81,6 +82,7 @@ section img#mountains_front {
   color: #ffffff;
   white-space: nowrap;
   font-size: 6.1vw;
+  transition: none;
   z-index: 9;
 }
 
@@ -99,7 +101,8 @@ section img#mountains_front {
 .sec {
   position: relative;
   padding: 100px;
-  background: #1c0522;
+  /* background: #1c0522; */
+  background: #000000;
 }
 
 .sec h2 {
@@ -120,6 +123,8 @@ section img#mountains_front {
   left: 0;
   width: 78px;
   height: 100%;
+  border-radius: 8px;
+  border: 0.1px solid rgba(110, 110, 109, 0.642);
   background: rgba(81, 35, 112, 0.404);
   backdrop-filter: blur(10px);
   padding: 6px 14px;
@@ -391,4 +396,65 @@ section img#mountains_front {
   width: calc(100% - 240px);
   left: 240px;
 }
+
+/* change greet */
+.sec #greet{
+  color: orange;
+}
+
+/* display popup when click on logout */
+.logout_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logout_popup {
+  background-color: #fff; 
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  max-width: 500px;
+}
+
+.logout_popup h2 {
+  font-weight: 170;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+
+.logout_popup p {
+  margin-bottom: 30px;
+  color: #666; 
+}
+
+
+.logout_popup button {
+  padding: 15px 24px;
+  color: #3a69f7;
+  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 15px;
+}
+
+
+
+.logout_popup button:hover {
+  background-color: #3a69f7; /* Darker blue on hover */
+  color: #000000;
+}
+
 

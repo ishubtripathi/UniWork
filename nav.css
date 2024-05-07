@@ -18,6 +18,7 @@
 
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,12 +60,12 @@ section img {
 
 section .logoo {
     /* remove position of need */
-  /* position: fixed;  */
+  position: fixed; 
   width: 19%;
   height: auto;
   left: 48%;
   margin-top: 1%;
-  filter: drop-shadow(0 0 20px rgba(66, 225, 225, 0.687));
+  filter: drop-shadow(0 0 35px rgb(66, 225, 225));
 }
 
 section img#mountains_front {
@@ -387,3 +388,4 @@ section img#mountains_front {
   width: calc(100% - 240px);
   left: 240px;
 }
+

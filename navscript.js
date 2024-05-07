@@ -25,17 +25,28 @@ window.addEventListener("scroll", function () {
   stars.style.left = value * 0.25 + "px";
   moon.style.top = value * 1.05 + "px";
 
-  mountains_behind.style.top = value * 0.5 + "px";
+  mountains_behind.style.top = value * 1 + "px";
   mountains_front.style.top = value * 0 + "px";
 
   text.style.marginRight = value * 4 + "px";
-  text.style.marginTop = value * 1.5 + "px";
+  text.style.marginTop = value * 1 + "px";
 });
 
 btn.addEventListener("click", function() {
   sidebar.classList.toggle("active");
+  smoothScrollToTop(); // Smooth scroll to top
 });
 
 searchBtn.addEventListener("click", function() {
   sidebar.classList.toggle("active");
+  smoothScrollToTop(); // Smooth scroll to top
 });
+
+function smoothScrollToTop() {
+  const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (currentScroll > 0) {
+    window.requestAnimationFrame(smoothScrollToTop);
+    window.scrollTo(0, currentScroll - currentScroll / 20); // Adjust the divisor for smoother or faster scrolling
+  }
+}

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 #particles-js {
@@ -25,10 +26,12 @@ body {
   background: url("/images/sky.png");
   min-height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section {
   position: relative;
+  scroll-behavior: smooth;
   display: flex;
   align-items: center;
   justify-content: center;

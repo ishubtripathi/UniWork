@@ -30,11 +30,12 @@ window.addEventListener("scroll", function () {
   mountains_front.style.top = value * 0 + "px";
 
    // Zoom effect for the front mountain
-   let zoomFactor = 1 + value * 0.0015; // Adjust the multiplier for the zoom effect
+   let zoomFactor = 1 + value * 0.0019; // Adjust the multiplier for the zoom effect
    mountains_front.style.transform = `scale(${zoomFactor})`;
 
   text.style.marginRight = value * 4 + "px";
   text.style.marginTop = value * 1 + "px";
+  
 });
 
 btn.addEventListener("click", function() {
@@ -62,7 +63,6 @@ logoutBtn.addEventListener("click", function() {
     <h2>Log out</h2>
     <p>You will be returned to the login screen.</p>
     <button id="cancel_logout">Cancel</button>
-    <hr>
     <button id="confirm_logout">Log out</button>
   `;
 

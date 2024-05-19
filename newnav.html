@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniWork</title>
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="aboutsection.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style type="text/css">
+        body, #hero {
+            min-height: 100vh;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- particle ja -->
-    <div id="particles-js"></div>
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -54,21 +62,21 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-folder' ></i>
+                    <i class='bx bx-folder'></i>
                     <span class="links_name">File Manager</span>
                 </a>
                 <span class="tooltip">Files</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-heart' ></i>
+                    <i class='bx bx-heart'></i>
                     <span class="links_name">Saved</span>
                 </a>
                 <span class="tooltip">Saved</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-cog' ></i>
+                    <i class='bx bx-cog'></i>
                     <span class="links_name">Setting</span>
                 </a>
                 <span class="tooltip">Setting</span>
@@ -84,38 +92,52 @@
                     </div>
                 </div>
                 <i class='bx bx-log-out' id="log_out"></i>
-                <div class="popup-container">
-                    <div class="popup-box">
-                        <h1>hellow world</h1>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <section id="#home">
-        <img src="./images/stars.png" id="stars" alt="stars" />
-        <img src="./images/nf-unscreen.gif" id="moon" alt="moon" class="logoo">
-        <img src="./images/backmountain.png" id="mountains_behind" />
-        <h2 id="text">UNIWOK</h2>
-        <!-- <a href="#sec" id="btn">Explore</a> -->
-        <img src="./images/froeground.png" id="mountains_front"/>
-    </section>
-  
-      <div class="sec" id="sec">
-        <h2>Welcom to <span id="greet">UniWork</span>!</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sed,
-          laudantium sequi placeat adipisci minus nesciunt aliquam vero itaque
-          iste id ipsum aliquid voluptas consequuntur. Veritatis saepe quasi eius
-          sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          tenetur, rerum natus cupiditate, cumque earum incidunt illum quo
-          recusandae odit eligendi molestias labore, minima repellat facilis
-          mollitia eveniet sunt itaque. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Natus, suscipit! Ratione blanditiis doloribus ipsa
-          dolorem quasi, delectus provident corporis quidem molestiae aliquam quae
-          voluptas temporibus, nesciunt nobis laudantium. Obcaecati, quas!
-        </p>
-      </div>
+    <!-- home -->
+    <div class="homelogo">
+        <img src="/images/logo/glow.png" alt="glow" id="glow">
+        <img src="/images/logo/nf-unscreen.gif" alt="logo" id="logo">
+        <div class="heading">
+            <h4 class="heading">UniWork</h4>
+        </div>
+        <section id="hero" class="grid-inner">
+            <div class="blur-circle"></div>
+            <div>
+                <h1 class="bs-220">
+                    <div>
+                        <span class="hero-split chars xs-center creative">Creative</span>
+                        <span class="hero-split chars red xs-center web">Web</span>
+                    </div>
+                    <div>
+                        <span class="hero-split chars left">Studio</span>
+                    </div>
+                </h1>
+                <div id="hero-work-link" class="bs-xl-8 bs-xl-os-10 bs-xs-16 bs-xs-os-0 hero-in">
+                    <a href="../work/opositive">
+                        <span class="link-bg"></span>
+                        <span class="bs-hero-small upper">WORK</span>
+                        <i>
+                            <svg viewBox="0 0 56 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="arrow-line" d="M1 6L49.8077 6" stroke="#EEEEF2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="arrow-line" d="M1 6L49.8077 6" stroke="#EEEEF2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M49.8086 1L55.0009 6L49.8086 11L49.8086 1Z" stroke="#EEEEF2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                        </i>
+                        <span class="bs-hero-small upper">UNIWORK</span>
+                    </a>
+                </div>
+                <div class="scroll-tet">
+                    <a href="#">{  Scroll  }</a>
+                </div>
+                <div class="para">
+                    <p>We revolutionize the way creators showcase, protect, and monetize their work, By leveraging innovative tokenization technology and providing a secure, user-friendly marketplace..</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- about -->
     <script src="navscript.js"></script>
     <script src="/particle/particles.js"></script>
     <script src="/particle/app.js"></script>

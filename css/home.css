@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.homelogo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.homelogo #glow {
+    width: 50rem;
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 3.5rem;
+}
+
+.homelogo #logo {
+    position: absolute;
+    margin-top: 17rem;
+    margin-left: 10.5rem;
+    width: 35rem;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgb(36,54,107));
+    z-index: 2; /* Higher z-index to be on top of the glow */
+}
+
+.grid-inner {
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+}
+
+.homelogo #hero {
+    z-index: 5;
+    align-items: flex-start;
+    padding-bottom: 4.17vw;
+    height: 100vh;
+    padding-top: 17.5vh;
+    position: relative;
+}
+#hero{
+    position: relative;
+}
+.homelogo #hero .blur-circle {
+    left: 30%;
+    top: 65%;
+}
+
+.homelogo #hero .bs-220 {
+    font-size: clamp(80px, 15.27vw, 240px);
+    font-family: "Odibee Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    /* margin-top: -3.5rem; */
+
+}
+
+.homelogo #hero .bs-220 > div:first-of-type {
+    /* width: 100px; */
+    margin-left: -2.5rem;
+    height: 205px;
+    margin-top: -3.5rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.homelogo #hero .hero-split.chars.red.xs-center.web {
+    margin-right: -6rem;
+    color: #FF741E;
+    /* -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #000;
+    text-stroke-width: 1px; 
+    text-stroke-color: #000;  */
+}
+
+
+/* 
+.homelogo #hero .hero-split.chars.creative {
+    margin-left: -4.5rem; 
+} */
+
+
+.homelogo #hero .hero-split.chars.left {
+    margin-left: 41rem;
+    width: 100%;
+}
+
+
+.homelogo #hero .bs-hero-small {
+    font-size: 14px;
+}
+
+.homelogo #hero .scroll-to {
+    position: absolute;
+    bottom: 4.17vw;
+    left: 54.17vw;
+}
+
+.homelogo #hero .hero-copy {
+    position: absolute;
+    bottom: 4.17vw;
+    right: 12.5vw;
+}
+
+.homelogo #hero #hero-work-link a {
+    margin-top: 1em;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-right: 7rem;
+    margin-left: -7rem;
+    border: 1.5px solid rgba(238, 238, 242, 0.306);
+    border-radius: 5px;
+    padding: 1.5em 2.25em;
+    line-height: 1;
+    overflow: hidden;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+    text-decoration: none;
+    color: rgba(238, 238, 242, 0.306);
+}
+
+.homelogo #hero #hero-work-link a:hover{
+    color: #FF741E;
+    /* border: 1.5px solid #ff741e62; */
+}
+
+/* uncomment if wont arrow color change */
+
+/* #hero-work-link a:hover svg path {
+    stroke: #FF741E;
+} */
+
+.homelogo #hero #hero-work-link a span,
+.homelogo #hero #hero-work-link a svg {
+    position: relative;
+}
+
+.homelogo #hero #hero-work-link a:hover .link-bg {
+    transform: translateY(0);
+}
+
+.homelogo #hero #hero-work-link a:hover .arrow-line:first-of-type {
+    transform: scaleX(1);
+    transition-delay: 0.2s;
+}
+
+.homelogo #hero #hero-work-link a:hover .arrow-line:nth-of-type(2) {
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.homelogo #hero #hero-work-link i {
+    flex: 0 0 12%;
+}
+
+.homelogo #hero #hero-work-link i svg {
+    width: 100%;
+    height: auto;
+}
+
+.homelogo #hero #hero-work-link .arrow-line {
+    transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.homelogo #hero #hero-work-link .arrow-line:first-of-type {
+    transform-origin: center left;
+    transform: scaleX(0);
+}
+
+.homelogo #hero #hero-work-link .arrow-line:nth-of-type(2) {
+    transform-origin: center right;
+    transition-delay: 0.2s;
+}
+
+#hero-work-link {
+    position: absolute;
+    top: calc(75% + 35px); /* Adjust the offset from the "Studio" text */
+    right: 0;
+    transform: translateY(-100%);
+}
+
+.bs-hero-small.upper {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px; 
+}
+
+.homelogo #hero #hero-work-link .link-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 238, 242, 0.1);
+    transform: translateY(100%);
+    transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* .bs-220 {
+    font-size: clamp(90px, 15.27vw, 20vw);
+    line-height: 1.1;
+} */
+
+.homelogo h4{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 80;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #FF741E;
+    margin-top: 2rem;
+    margin-bottom: -4.5rem;
+    margin-left: 10.5rem;
+    top: -10px;
+    
+}
+
+.homelogo .para {
+    display: inline-flex;
+    text-transform: uppercase;
+    margin-left: 42rem;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    font-size: 12px;
+    width: 48%;
+    /* max-width: 90%; */
+    margin-top: calc(5% + 2.5px);
+    color: #e1dad85a;
+    align-items: center;  
+    justify-content: center; 
+    text-align: justify; 
+}
+
+.homelogo .para > div {
+    width: 100%; 
+    text-align: justify;
+}
+
+.scroll-text a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: calc(5% - 9px);
+    justify-content: center;
+    margin-left: 50%;
+    color: #e1dad85a;
+}
+.scroll-text a:hover{
+    color: #ff741eba;
+    transition: all .5s ease;
+}

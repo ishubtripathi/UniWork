@@ -9,34 +9,12 @@
 //     sidebar.classList.toggle("active");
 // }
 
-let stars = document.getElementById("stars");
-let moon = document.getElementById("moon");
-let mountains_front = document.getElementById("mountains_front");
-let mountains_behind = document.getElementById("mountains_behind");
 let text = document.getElementById("text");
 let btn = document.getElementById("Mbtn");
 let header = document.querySelector("header");
 let sidebar = document.querySelector(".sidebar");
 let searchBtn = document.querySelector(".bx-search");
 let logoutBtn = document.getElementById("log_out");
-
-window.addEventListener("scroll", function () {
-  let value = window.scrollY;
-
-  stars.style.left = value * 0.25 + "px";
-  moon.style.top = value * 1.05 + "px";
-
-  mountains_behind.style.top = value * 1 + "px";
-  mountains_front.style.top = value * 0 + "px";
-
-   // Zoom effect for the front mountain
-   let zoomFactor = 1 + value * 0.0019; // Adjust the multiplier for the zoom effect
-   mountains_front.style.transform = `scale(${zoomFactor})`;
-
-  text.style.marginRight = value * 4 + "px";
-  text.style.marginTop = value * 1 + "px";
-  
-});
 
 btn.addEventListener("click", function() {
   sidebar.classList.toggle("active");

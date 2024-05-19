@@ -23,58 +23,11 @@ html {
 }
 
 body {
-  background: url("/images/sky.png");
+  /* background: url("/images/sky.png"); */
+  background: #1D2145;
   min-height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-section {
-  position: relative;
-  scroll-behavior: smooth;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  padding: 100px;
-}
-
-section::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  /* background: linear-gradient(to top, #1c0522, transparent); */
-  background: linear-gradient(to top, #000000, transparent);
-  z-index: 22;
-}
-
-section img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-section .logoo {
-    /* remove position of need */
-  position: fixed; 
-  width: 25%;
-  height: auto;
-  /* left: 48%; */
-  left: 38%;
-  margin-top: 1%;
-  filter: drop-shadow(0 0 35px rgb(66, 225, 225));
-}
-
-section img#mountains_front {
-  z-index: 10;
 }
 
 #text {
@@ -107,13 +60,16 @@ section img#mountains_front {
 }
 
 .sec h2 {
+  text-align: center;
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .sec p {
-  font-size: 1em;
+  margin-top: -23px;
+  text-align: center;
+  font-size: 1.4em;
   color: #fff;
 }
 
@@ -503,25 +459,6 @@ section img#mountains_front {
   transform: skew(0deg, -30deg);
 }
 
-@keyframes move {
-  25% {
-    opacity: 1;
-
-  }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-}
-
 .text {
   display: block;
   margin-top: 75px;
@@ -534,9 +471,7 @@ section img#mountains_front {
   animation: pulse 2s linear alternate infinite;
 }
 
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
-}
+
+
+/* About-Page css */
 

@@ -9,13 +9,13 @@
 .homelogo #glow {
     width: 50rem;
     position: absolute;
-    margin-top: 3rem;
+    margin-top: -1rem;
     margin-left: 3.5rem;
 }
 
 .homelogo #logo {
     position: absolute;
-    margin-top: 17rem;
+    margin-top: 14rem;
     margin-left: 10.5rem;
     width: 35rem;
     height: auto;
@@ -56,7 +56,7 @@
 
 .homelogo #hero .bs-220 > div:first-of-type {
     /* width: 100px; */
-    margin-left: -2.5rem;
+    margin-left: -3.5rem;
     height: 205px;
     margin-top: -3.5rem;
     display: flex;
@@ -65,7 +65,7 @@
 }
 
 .homelogo #hero .hero-split.chars.red.xs-center.web {
-    margin-right: -6rem;
+    margin-right: 8rem;
     color: #FF741E;
     /* -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: #000;
@@ -209,9 +209,10 @@
 
 .homelogo h4{
     font-family: "Orbitron", sans-serif;
+    padding-bottom: 0.5rem;
     font-optical-sizing: auto;
     font-weight: 80;
-    font-size: 25px;
+    font-size: 15px;
     text-transform: uppercase;
     font-style: normal;
     color: #FF741E;
@@ -229,7 +230,7 @@
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 10;
-    font-size: 12px;
+    font-size: 11px;
     width: 48%;
     /* max-width: 90%; */
     margin-top: calc(5% + 2.5px);
@@ -237,6 +238,7 @@
     align-items: center;  
     justify-content: center; 
     text-align: justify; 
+    letter-spacing: 1px;
 }
 
 .homelogo .para > div {
@@ -251,7 +253,7 @@
     font-optical-sizing: auto;
     font-size: 12px;
     display: inline-block;
-    margin-top: calc(5% - 9px);
+    margin-top: calc(4% - 10px);
     justify-content: center;
     margin-left: 50%;
     color: #e1dad85a;
@@ -259,4 +261,70 @@
 .scroll-text a:hover{
     color: #ff741eba;
     transition: all .5s ease;
+}
+
+/* usp */
+
+.usp{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+.usp .wordCarousel {
+    font-size: 15px;
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        left: -40.5%;
+        li {
+            color: #fff;
+            letter-spacing: 1px;
+            font-size: 10px;
+            font-weight: 80;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+        }
+    }
+}
+.usp .wordCarousel .crz{
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-left: 35%;
+    color: #fff;
+}
+.usp .wordCarousel .dot{
+    font-size: 11px;
+    color: red;
+}
+
+
+/* .usp .wordCarousel .flip5 li{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-size: 12px;
+} */
+
+.flip5 { animation: flip5 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+/* .flip5 { animation: flip5 10s ease-out infinite; } */
+
+
+@keyframes flip5 {
+    0% { margin-top: -450px; }
+    5% { margin-top: -360px; }
+    20% { margin-top: -360px; }
+    25% { margin-top: -270px; }
+    40% { margin-top: -270px; }
+    45% { margin-top: -180px; }
+    60% { margin-top: -180px; }
+    65% { margin-top: -90px; }
+    80% { margin-top: -90px; }
+    85% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -450px; }
 }

@@ -115,8 +115,15 @@ body {
 }
 
 .logo_content .logo .logo_name {
-  font-size: 20px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-optical-sizing: auto;
+  font-size: 17px;
   font-weight: 400;
+}
+
+.logo_content .logo .logo_name span{
+  color: #FF741E;
 }
 
 .logo_content .logo img {

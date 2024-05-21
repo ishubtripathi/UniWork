@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+:root{
+    --themecolor: #FF741E;
+    --textcolor:#e1dad85a;
+}
+
 .homelogo {
     position: relative;
     width: 100%;
@@ -216,13 +221,17 @@
     text-transform: uppercase;
     font-style: normal;
     color: #FF741E;
-    margin-top: 2rem;
     margin-bottom: -5rem;
+    margin-top: 2rem;
     margin-left: 9.5rem;
     top: -10px;
     
 }
+/* for dual tone logo */
 
+/* .homelogo h4 span{
+    color: #ffffff;
+} */
 .homelogo .para {
     display: inline-flex;
     text-transform: uppercase;
@@ -239,6 +248,10 @@
     justify-content: center; 
     text-align: justify; 
     letter-spacing: 1px;
+}
+
+.homelogo .para:hover{
+    color: #ffffff9d;
 }
 
 .homelogo .para > div {
@@ -326,35 +339,68 @@
 }
 
 
-/* scroll pattern */
-
-.scrollPattern {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0
-}
-
-.scrollPattern img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5
-}
-
-.scrollPattern .patternTop {
-    position: absolute;
-    top: -102%;
-    width: 100%;
+/* abt -1 section */
+.abt-1 {
     height: 100vh;
-    overflow: hidden
+    width: 100%;
+    margin-top: 14rem;
+    justify-content: space-between;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
 }
 
-.scrollPattern .patternBottom {
-    position: absolute;
-    bottom: -102%;
+.head1 {
+    display: flex;
     width: 100%;
-    height: 100vh;
-    overflow: hidden
+    color: #fff;
+    /* font-weight: 10; */
+    font-size: 13px;
+    box-sizing: border-box;
 }
+
+.head1 .dot {
+    margin-left: -3rem;
+    font-size: 13px;
+    color: red;
+    padding: 5px;
+}
+
+.head1 .a2{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.head1 .a1 {
+    margin-right: 4rem; 
+}
+
+.head1 .a2 {
+    font-size: 12.5px;
+    /* margin-right: -10rem; */
+    /* color: var(--textcolor); */
+    width: 34%;
+    max-width: 35%;
+    text-align: justify;
+    text-transform: lowercase;
+    /* font-weight: -10; */
+    letter-spacing: 1.5px;
+}
+
+.head1 .p1{
+    display: flex;
+    margin-top: -12px;
+    justify-content: space-between;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 40px;
+    color: #ffffff;
+    width: 70%;
+    height: auto;
+    margin-left: 55px;
+    margin-right: -5.5rem;
+}
+
+
+
+
+/* scroll reveal */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/nav.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style type="text/css">
+        body, #hero {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <img src="/images/logo/nf-unscreen.gif" alt="logo">
+                <div class="logo_name"><span>Uni</span>Work</div>
+            </div>
+            <i class='bx bx-menu' id="Mbtn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="/newnav.html">
+                    <i class='bx bx-home-alt-2'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="/html/user.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="message.html">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Message</span>
+                </a>
+                <span class="tooltip">Message</span>
+            </li>
+            <!-- Uncomment other links as needed -->
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="/images/nav/user.jpg" alt="user">
+                    <div class="name_job">
+                        <div class="name">Shubh Tripathi</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </div>
+        </div>
+    </div>
+    <script src="/navscript.js"></script>
+</body>
+</html>

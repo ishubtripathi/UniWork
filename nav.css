@@ -23,7 +23,8 @@ html {
 }
 
 body {
-  /* background: url("/images/sky.png"); */
+  /* background: url("/images/background/green_bg1.avif"); */
+  /* background-size: cover; */
   background: #1D2145;
   min-height: 100vh;
   overflow-x: hidden;
@@ -157,9 +158,10 @@ body {
 
 .sidebar ul li {
   position: relative;
+  top: 7rem;
   height: 50px;
   width: 100%;
-  margin: 0 5px;
+  margin: 0 0px;
   list-style: none;
   line-height: 50px;
 }
@@ -186,6 +188,10 @@ body {
   display: none;
 }
 
+.sidebar{
+  border-radius: 0px;
+}
+
 .sidebar ul li:hover .tooltip {
   transition: all 0.5s ease;
   top: 50%;
@@ -202,6 +208,8 @@ body {
   white-space: nowrap;
 }
 
+
+
 .sidebar ul li input {
   position: absolute;
   height: 100%;
@@ -213,6 +221,7 @@ body {
   border: none;
   background: none;
   padding-left: 50px;
+  padding-right: 15px;
   font-size: 18px;
   color: #fff;
 }
@@ -225,7 +234,7 @@ body {
   position: absolute;
   z-index: 99;
   color: #fff;
-  font-size: 22px;
+  font-size: 19px;
   transition: all 0.5s ease;
 }
 
@@ -235,7 +244,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-  color: #0d0d0f;
+  color: #0f0d0d;
   background: rgba(116, 128, 129, 0.183);
 }
 
@@ -252,6 +261,7 @@ body {
   pointer-events: none;
   transition: all 0.5s ease;
 }
+
 
 .sidebar.active .links_name {
   opacity: 1;
@@ -270,7 +280,7 @@ body {
   position: relative;
   padding: 10px 6px;
   height: 60px;
-  background: rgba(25, 1, 41, 0.274);
+  background: rgba(142, 4, 234, 0.274);
   transition: all 0.4s ease;
 }
 

@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+/* html {
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+} */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+}
+
 :root{
     --themecolor: #FF741E;
     --textcolor:#e1dad85a;
+    --color-text :#fc3333;
 }
 
 .homelogo {
@@ -14,7 +29,7 @@
 .homelogo #glow {
     width: 50rem;
     position: absolute;
-    margin-top: -1rem;
+    margin-top: 1.6rem;
     margin-left: 3.5rem;
 }
 
@@ -343,7 +358,8 @@
 .abt-1 {
     height: 100vh;
     width: 100%;
-    margin-top: 14rem;
+    /* margin-top: 14rem; */
+    margin-top: 8rem;
     justify-content: space-between;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
@@ -358,7 +374,7 @@
     box-sizing: border-box;
 }
 
-.head1 .dot {
+.head1 .dot, .abt-1 .dot {
     margin-left: -3rem;
     font-size: 13px;
     color: red;
@@ -372,6 +388,25 @@
 
 .head1 .a1 {
     margin-right: 4rem; 
+    color: var(--textcolor);
+}
+
+.head1 .a1:hover {
+    color: var(--themecolor);
+    transition: 0.5s ease;
+}
+
+.abt-1 .a4{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: var(--textcolor);
+    margin-left: 50%;
+    font-size: 15px;
+}
+
+.abt-1 .a4:hover {
+    color: var(--themecolor);
+    transition: 0.5s ease;
 }
 
 .head1 .a2 {
@@ -383,14 +418,14 @@
     text-align: justify;
     text-transform: lowercase;
     /* font-weight: -10; */
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
 .head1 .p1{
     display: flex;
     margin-top: -12px;
     justify-content: space-between;
-    text-align: left;
+    text-align: right;
     letter-spacing: 1px;
     font-size: 40px;
     color: #ffffff;
@@ -400,7 +435,233 @@
     margin-right: -5.5rem;
 }
 
+/* image */
+.header1{
+    width: 100%;
+    height: 300px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    /* align-items:flex-start ; */
+    color: var(--color-text);
+}
+
+.header1 p{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(120%) brightness(80%) saturate(130%) sepia(20%);
+}
+
+.container1 .img-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.container1 .img-container.right {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.container1 .img-container.right p{
+    text-align: right;
+}
+.container1 .img-container.left p{
+    text-align: left;
+}
+
+.container1 .img-container.left {
+    flex-direction: row;
+    text-align: right;
+}
+
+.container1 .img-container img {
+    max-width: 50%;
+    height: auto;
+}
+
+.container1 .img-container p {
+    margin: 0 60px;
+    flex: 1;
+    color: #fff;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+
+#row-1{
+    /* height: 200px; */
+    margin-top: 4rem;
+    height: 300px;
+}
+#row-2{
+    /* height: 500px; */
+    height: 300px;
+    margin-top: 4rem;
+}
+#row-3{
+    /* height: 150px; */
+    height: 300px;
+    margin-top: 4rem;
+}
+#row-4{
+    /* height: 400px; */
+    height: 300px;
+    margin-top: 4rem;
+}
+#row-5{
+    /* height: 700px; */
+    height: 300px;
+    margin-top: 4rem;
+}
+#row-6{
+    height: 300px;
+    margin-top: 4rem;
+}
+/* #row-7{
+    height: 200px;
+}
+#row-8{
+    height: 600px;
+}
+#row-9{
+    height: 300px;
+}
+#row-10{
+    height: 500px;
+} */
+
+.col:nth-child(1){
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+.col:nth-child(2){
+    flex: 5;
+}
+
+.img-container.right img{
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+}
+
+.img-container.left img{
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+}
+
+
+.whitespace{
+    width: 100%;
+    height: 300px;
+}
+
 
 
 
 /* scroll reveal */
+.reveal {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.1s ease-in-out;
+}
+
+.reveal.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.a1.reveal {
+    transition-delay: 0.2s;
+}
+
+.a2.reveal {
+    transition-delay: 0.3s;
+}
+
+.p1.reveal {
+    transition-delay: 0.4s;
+}
+
+/* animation for text "creative web studio" */
+
+/* Add this animation keyframe */
+@keyframes enterFromBottomCircle {
+    0% {
+        /* transform: translateZ(100%); */
+        opacity: 0;
+    }
+    100% {
+        /* transform: translateZ(0); */
+        opacity: 1;
+    }
+}
+
+.homelogo #hero .bs-220 {
+    font-size: clamp(80px, 15.27vw, 240px);
+    font-family: "Odibee Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    animation: enterFromBottomCircle 1.5s ease-in-out; /* Apply the animation */
+}
+
+/* Add animation for other content to fade in after a delay */
+.homelogo .para,
+.homelogo .scroll-text,
+.homelogo .usp,
+.abt-1, .homelogo .heading {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; 
+}
+
+.homelogo .heading{
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.scroll-text a {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; 
+}
+
+.usp {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; 
+}
+
+/* Add animation for .abt-1 */
+.abt-1 {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#hero-work-link a{
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; 
+}
+
+@keyframes contentFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

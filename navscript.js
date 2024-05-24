@@ -77,3 +77,9 @@ function smoothScrollToTop() {
     window.scrollTo(0, currentScroll - currentScroll / 25); // Adjust the divisor for smoother or faster scrolling
   }
 }
+
+// fetc('/newnav.html')
+//     .then(response => response.text())
+//     .then(data => {
+//         document.getElementById('sidebar').innerHTML = data;
+// });

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.form-container {
+    position: absolute;
+    background: #1d214590;
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    left: 900px;
+    top: 7rem;
+    border: 0.5px solid rgba(218, 113, 14, 0.347);
+    border-radius: 20px;
+    box-shadow: 0 0 0px rgba(232, 5, 5, 0.1);
+    width: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 1px;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color:#FF741E;
+    font-size: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color:white;
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 110%;
+    padding: 10px;
+    border: 1px  #804343;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.183);
+    color:white;
+}
+
+.form-group input[type="file"] {
+    padding: 0;
+    color:white;
+}
+
+.form-group button {
+    width: 49vh;
+    padding: 10px;
+    background-color: #436a93;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #302a2f;
+}
+
+/* Token Container */
+/* .token-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+} */
+
+.token-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid #080808ae;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.982);
+    z-index: 1000;
+}
+
+.token-container .c4{
+    border: 0.1px solid rgba(59, 58, 58, 0.21);
+    border-radius: 4px;
+}
+
+.token-content {
+    text-align: center;
+}
+
+/* Blur effect */
+.blurred {
+    filter: blur(5px);
+}
+
+
+.token-display {
+    font-size: 18px;
+    color: #FF741E;
+}
+
+#copyToken {
+    background-color: #FF741E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#copyToken:hover {
+    background-color: #D65E00;
+}
+
+.TokenBg1{
+    top: 6rem;
+    left: 3rem;
+    width: 650px;
+    height: auto;
+}
+.NfUnscreen{
+    width: 90px;
+    height: auto;
+    top: 24px;
+    left: 1380px;
+}
+.Glow{
+    width: 140px;
+    height: auto;
+    top: 130px;
+    left: 1350px;
+}
+

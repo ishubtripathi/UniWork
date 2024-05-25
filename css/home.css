@@ -682,7 +682,7 @@ img{
 
 /* scroll attitude */
 
-#attitude {
+/* #attitude {
     height: 100%;
     min-height: 100vh;
     position: relative
@@ -939,4 +939,4 @@ body.oa i.circle-tag:nth-of-type(2) {
 }
 .center {
     text-align: center
-}
+} */

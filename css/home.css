@@ -365,6 +365,19 @@ html, body {
     font-optical-sizing: auto;
 }
 
+.backblur{
+    z-index: -3;
+    opacity: 65%;
+    position: absolute;
+    width: 411px;
+    height: 421px;
+    left: 1115.36px;
+    top: 835.42px;
+    background: linear-gradient(180deg, #0C8CE9 0%, #9716C5 62.33%);
+    filter: blur(175px);
+    transform: rotate(126.84deg);
+}
+
 .head1 {
     display: flex;
     width: 100%;
@@ -665,3 +678,265 @@ img{
     }
 }
 
+
+
+/* scroll attitude */
+
+#attitude {
+    height: 100%;
+    min-height: 100vh;
+    position: relative
+}
+
+#attitude .grid-inner {
+    height: 100%
+}
+
+#attitude .innerWrap {
+    height: 100%
+}
+
+#attitude .hex-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+#attitude .hex-wrap>svg {
+    opacity: 0.4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 50vw;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+#attitude .hex-wrap p {
+    margin: 2em 0
+}
+
+#attitude .serviceLink {
+    position: relative;
+    z-index: 10;
+    font-family: 'TT Tunnels Bold', "Impact", sans-serif;
+    font-size: clamp(90px, 16.9vw, 20vw);
+    overflow: hidden;
+    color: #151833;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 0%;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+@supports (-webkit-touch-callout:none) {
+    #attitude .serviceLink {
+        letter-spacing: -0.05em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+}
+
+#attitude .boxes {
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    margin-left: 99.9984vw;
+    left: 0;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+#attitude .boxes>div {
+    width: 37.4994vw;
+    padding-left: 4.1666vw
+}
+
+#attitude .boxes>div:first-of-type {
+    padding-left: 0;
+    width: 33.3328vw
+}
+
+#attitude .boxes>div.b-middle {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center
+}
+
+#attitude .boxes>div.b-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+#attitude .boxes h4 {
+    line-height: 1
+}
+
+#attitude .boxes .box-last {
+    aspect-ratio: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+#attitude .boxes .box-last h3 {
+    height: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+#attitude .boxes .box-last h3 .jb-bg {
+    z-index: 1;
+    border-radius: 4em
+}
+
+#attitude .boxes .box-last h3 a.jelly-button {
+    display: inline-block;
+    padding: 2em 4em
+}
+
+#attitude .boxes .box-last h3 span {
+    display: inline-block;
+    position: relative;
+    z-index: 2
+}
+
+.xs-top-3 {
+    margin-top: 15vh
+}
+
+.big-fade {
+    z-index: -1;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 37vw;
+    color: #171A37;
+    font-family: 'TT Tunnels Bold', "Impact", sans-serif
+}
+
+.xs-top-0 {
+    margin-top: 0vh
+}
+
+.bs-grid.sm-grid-top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.bs-grid.grid-middle {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.grid-inner {
+    padding-left: 12.4998vw;
+    padding-right: 12.4998vw
+}
+.text-progress {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1em;
+    font-size: 34vw;
+    overflow: visible;
+    font-family: 'TT Tunnels Bold', "Impact", sans-serif
+}
+
+.box {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3328vw;
+    flex: 0 0 33.3328vw;
+    padding: 4.1666vw;
+    background-color: #222650;
+    border-radius: 10px
+}
+
+.section-title,
+.w-title {
+    font-family: 'TT Lakes Neue', "Impact", sans-serif;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 12px;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 1.5rem
+}
+
+body.oa i.circle-tag:first-of-type {
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+body.oa i.circle-tag:nth-of-type(2) {
+    background-color: #000
+}
+.bs-60 {
+    font-size: calc(40px + 1.4vw);
+    line-height: 1
+}
+.upper {
+    text-transform: uppercase
+}
+#attitude .boxes>div.b-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+.bs-xl-7 {
+    width: 29.1662vw
+}
+.bs-xl-7 {
+    width: 29.1662vw
+}
+.bs-sm-18 {
+    width: 74.9988vw
+}
+.bs-sm-os-3 {
+    margin-left: 12.4998vw
+}
+.xs-top-3 {
+    margin-top: 15vh
+}
+.center {
+    text-align: center
+}

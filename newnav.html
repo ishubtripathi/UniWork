@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniWork</title>
     <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="aboutsection.css">
+    <link rel="stylesheet" href="/preloader.css">
+    <!-- <link rel="stylesheet" href="/css/external.css"> -->
     <link rel="stylesheet" href="/css/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style type="text/css">
@@ -18,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- enable and disable preloader -->
+    <!-- <div class="spinner" id="preloader"></div> -->
+    <!-- end of preloader -->
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -54,11 +58,11 @@
                 <span class="tooltip">User</span>
             </li>
             <li>
-                <a href="/html/message.html">
-                    <i class='bx bx-chat'></i>
-                    <span class="links_name">Message</span>
+                <a href="/html/notification.html">
+                    <i class='bx bx-bell'></i>
+                    <span class="links_name">Notification</span>
                 </a>
-                <span class="tooltip">Message</span>
+                <span class="tooltip">Notifications</span>
             </li>
             <!-- <li>
                 <a href="saved.html">
@@ -152,6 +156,8 @@
                 </div>
             </div>
             <section class="abt-1">
+                <!-- background blur -->
+                <div class="backblur"></div>
                 <div class="head1">
                     <p class="a1 reveal"><span class="dot">⦿</span>About</p>
                     <p class="a2 reveal">Uniwork is the ultimate destination for creators to tokenize and monetize their work seamlessly.</p><br>
@@ -241,6 +247,76 @@
                 <div class="whitespace"></div>
             </div>
         </section>
+        <!-- services attitude -->
+
+        <!-- ATITUDE SECTION -->
+        <section id="attitude" class="xs-top-3">
+            <h2 class="big-fade xs-top-0">Attitude</h2>
+            <div class="bs-grid grid-middle grid-inner">
+                <div class="text-progress">
+                    <p>attitude</p>
+                    <p>attitude</p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div>
+                    <article class="box">
+                        <h3 class="section-title"><i class="circle-tag"></i><i class="circle-tag"></i>RULE NO.1</h3>
+                        <h4 class="bs-60 upper">DISCIPLINE </h4>
+                        <p>At our core, we are a team of disciplined professionals who are passionate about our craft. Our process is thorough, ensuring that we create work that is not only buzzworthy, but also surpasses your expectations.</p>
+                    </article>
+                </div>
+                <div class="b-end stack">
+                    <article class="box">
+                        <h3 class="section-title"><i class="circle-tag"></i><i class="circle-tag"></i>RULE NO.2</h3>
+                        <h4 class="bs-60 upper">Trust</h4>
+                        <p>Trust is essential in our client relationships. As experts in our field, we always strive to make the best decisions for your brand. We kindly ask you to place your trust in our process and unwavering dedication to your success.</p>
+                    </article>
+                </div>
+                <div class="b-middle stack">
+                    <article class="box">
+                        <h3 class="section-title"><i class="circle-tag"></i><i class="circle-tag"></i>RULE NO.3</h3>
+                        <h4 class="bs-60 upper">Passion</h4>
+                        <p>Our passion for what we do is evident in what we create. We pour all of our creativity and expertise into each project, ensuring that the end result is a unique and valuable website that exceeds your expectations.</p>
+                    </article>
+                </div>
+                <div class="stack">
+                    <article class="box">
+                        <h3 class="section-title"><i class="circle-tag"></i><i class="circle-tag"></i>RULE NO.4</h3>
+                        <h4 class="bs-60 upper">Devotion</h4>
+                        <p>We are devoted to our clients and to delivering our best work. Our commitment to perfection means that we won't stop until you are raving about us to everyone you know.</p>
+                    </article>
+                </div>
+                <div class="b-middle stack">
+                    <article class="box">
+                        <h3 class="section-title"><i class="circle-tag"></i><i class="circle-tag"></i>RULE NO.5</h3>
+                        <h4 class="bs-60 upper">Promise</h4>
+                        <p>We understand that redesigning your entire brand or website can be a daunting change. Our promise to you is that we will always strive to make you happy and satisfied with our work.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="hex-wrap bs-xl-7 bs-sm-18 bs-sm-os-3 xs-top-3 center">
+                <svg class="shape-anim" viewBox="0 0 256 218" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g transform="translate(-1529.000000, -989.000000)" fill="none" stroke-width="1"
+                        stroke="#EEEEF2">
+                        <g transform="translate(1529.555556, 989.920435)">
+                            <polyline vector-effect="non-scaling-stroke"
+                                points="0 0 0 34.9162585 31.8888889 54.0252776 63.7777778 34.9162585 95.7777778 54.0252776 95.7777778 88.9162585 127.5 108.5 159.555556 88.9162585">
+                            </polyline>
+                            <polyline vector-effect="non-scaling-stroke"
+                                points="95.7777778 88.9162585 63.7777778 108.025278 63.7777778 142.941536 32 162.025278">
+                            </polyline>
+                            <polyline vector-effect="non-scaling-stroke"
+                                points="63.8888889 142.945268 95.7777778 162.025278 127.5 142.945268 160 162.025278 159.555556 196.970546 127.666667 216.079565">
+                            </polyline>
+                            <polyline vector-effect="non-scaling-stroke"
+                                points="160 162.025278 191.444444 142.941536 223.555556 162.054287 254.777778 142.945268">
+                            </polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
     </div>
     <!-- about -->
     <script src="navscript.js"></script>
@@ -248,9 +324,23 @@
     <script src="/particle/app.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/scroll-reveal.js"></script>
+    <!-- <script src="/js/preloader.js"></script> -->
     <!-- linked javascripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>    
+    <script src="/dist/js/app.min.min.js"></script>
+    <script src="/dist/js/gsap.min.js"></script>
+    <script src="/dist/js/gsap-bundle.min.js"></script>
+    <script src="/dist/js/app.min.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.147.0/three.min.js" integrity="sha512-GWXLkqxMENYgBdQvA/lTeOV+R2auhasgKQxjMTWBFt3Z6GJVZ9owiyAMOzz0Wt6J1ri8bf/g2kHJV0uvWpJTuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/dist/js/utils/shaderUtils.js"></script>
+    <script src="/dist/js/honey-ball-src/shaders/bubble-shaders.js"></script>
+    <script src="/dist/js/honey-ball-src/shaders/honey-ball-shaders.js"></script>
+    <script src="/dist/js/honey-ball-src/bubbles-fbo.js"></script>
+    <script src="/dist/js/honey-ball-src/cam-parallax.js"></script>
+    <script src="/dist/js/honey-ball-src/honey-ball.js"></script>
+    <script src="/dist/js/honey-ball-src/main-three-scene.js"></script>
+    <script src="/dist/js/main.js"></script>
 </body>
 </html>

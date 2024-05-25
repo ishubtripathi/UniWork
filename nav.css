@@ -188,9 +188,6 @@ body {
   display: none;
 }
 
-.sidebar{
-  border-radius: 0px;
-}
 
 .sidebar ul li:hover .tooltip {
   transition: all 0.5s ease;

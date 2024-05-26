@@ -1,0 +1,25 @@
+{
+  "name": "uniwork",
+  "version": "1.0.0",
+  "description": "Tokenize your work here",
+  "main": "navscript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishubtripathi/UniWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishubtripathi/UniWork/issues"
+  },
+  "homepage": "https://github.com/ishubtripathi/UniWork#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

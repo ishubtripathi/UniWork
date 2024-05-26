@@ -7,9 +7,7 @@
 
 html, body {
     width: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
+    height: 100vh;
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
 }
@@ -227,7 +225,7 @@ html, body {
     line-height: 1.1;
 } */
 
-.homelogo h4{
+/* .homelogo h4{
     font-family: "Orbitron", sans-serif;
     padding-bottom: 0.5rem;
     font-optical-sizing: auto;
@@ -241,7 +239,18 @@ html, body {
     margin-left: 9.5rem;
     top: -10px;
     
+} */
+
+.homelogo h4 {
+    font: 25px/1 'Orbitron', sans-serif; /* Includes size, line-height, and family */
+    color: #FF741E;
+    font-weight: 80; /* Corrected weight scale (100-900) */
+    text-transform: uppercase;
+    margin: 2rem 0 -5rem 9.5rem;
+    position: relative;
+    top: -10px;
 }
+
 /* for dual tone logo */
 
 /* .homelogo h4 span{
@@ -940,3 +949,108 @@ body.oa i.circle-tag:nth-of-type(2) {
 .center {
     text-align: center
 } */
+
+
+
+/* footer */
+
+/* .ftr{
+    
+    bottom: -40%;
+} */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Poppins" sans-serif;
+    letter-spacing: 0.5px;
+    padding-top: 40px;
+    color: #fff;
+}
+
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 30px; 
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.footer-content h3 span{
+    color: var(--themecolor);
+}
+
+.footer-content P{
+    padding-top: 10px;
+    max-width: 500px;
+    margin: 10px auto;
+    font-size: 14px;
+    line-height: 17px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: var(--themecolor);
+}
+.footer-bottom{
+    background: #000;   
+    width: 100vw;
+    margin-top: -10px;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    color: var(--themecolor);
+    opacity: 4.;
+    font-weight: 200;
+}
+
+
+.line-blur {
+    position: absolute;
+    top: 50%; /* Adjust to position the line */
+    left: 0;
+    width: 100%; /* Ensure it covers the entire container */
+    height: 2px; /* Adjust the height of the line */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0)); /* Use a gradient to create a soft edge */
+    filter: blur(5px); /* Apply the blur effect */
+    transform: translateY(-50%); /* Center the line vertically */
+}

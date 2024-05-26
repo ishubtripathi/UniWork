@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+
 .form-container {
     position: absolute;
     background: #1d214590;
     backdrop-filter: blur(50px);
     padding: 20px;
     left: 900px;
-    top: 7rem;
+    top: 5.5rem;
     border: 0.5px solid rgba(218, 113, 14, 0.347);
     border-radius: 20px;
     box-shadow: 0 0 0px rgba(232, 5, 5, 0.1);
-    width: 65vh;
+    width: 61vh;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -27,22 +28,31 @@
     font-size: 30px;
 }
 
+input#file{
+    width: 100%;
+    padding: 10px;
+}
+
+
 .form-group {
     margin-bottom: 20px;
+    resize: none;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color:white;
+    color:#ffffff;
 }
 
 
 .form-group input,
 .form-group textarea,
-.form-group select {
-    width: 110%;
+.form-group select{
+    width: 100%;
     padding: 10px;
+    margin-top: 5px;
+    resize: none;
     border: 1px  #804343;
     border-radius: 5px;
     box-sizing: border-box;
@@ -58,7 +68,7 @@
 .form-group button {
     width: 49vh;
     padding: 10px;
-    background-color: #436a93;
+    background-color: rgba(18, 78, 173, 0.737);
     color: white;
     border: none;
     border-radius: 5px;
@@ -66,24 +76,11 @@
 }
 
 .form-group button:hover {
-    background-color: #302a2f;
+    color: rgba(0, 0, 0, 0.861);
+    background-color: rgb(255, 136, 0);
 }
 
 /* Token Container */
-/* .token-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-} */
 
 .token-container {
     display: none;
@@ -152,4 +149,3 @@
     top: 130px;
     left: 1350px;
 }
-

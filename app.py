@@ -1,51 +1,90 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
-from werkzeug.utils import secure_filename
+from flask import Flask, request, jsonify, render_template
+import sqlite3
 import os
-import random
-import string
+import re
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'avi', 'mov', 'mkv'}
 
-if not os.path.exists(app.config['UPLOAD_FOLDER']):
-    os.makedirs(app.config['UPLOAD_FOLDER'])
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
-
-def generate_token(name):
-    timestamp = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
-    random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
-    return f"{name}-{timestamp}-{random_string}"
+# Database setup
+def init_db():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS uploads (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        category TEXT NOT NULL,
+        filename TEXT NOT NULL,
+        token TEXT UNIQUE NOT NULL
+    )
+    ''')
+    conn.commit()
+    conn.close()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('upload.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST'])  # Ensure the endpoint accepts POST requests
 def upload_file():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
+    name = request.form['name'].strip().lower().replace(' ', '')
+    title = request.form['title']
+    description = request.form['description']
+    category = request.form['category']
+    token = request.form['token']
+
     file = request.files['file']
     if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        name = request.form['name']
-        title = request.form['title']
-        description = request.form['description']
-        category = request.form['category']
-        token = generate_token(name)
-        # Simulate saving to a database by printing
-        print(f"Saved: {name}, {title}, {description}, {category}, {filename}, {token}")
-        return jsonify({'success': True, 'token': token})
-    return jsonify({'error': 'Invalid file type'}), 400
+        return jsonify({'message': 'No file selected'}), 400
 
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+    # Ensure filename is secure using your custom secure_filename function
+    filename = secure_filename(file.filename)
+    file_path = os.path.join(UPLOAD_FOLDER, filename)
+    file.save(file_path)
+
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        INSERT INTO uploads (name, title, description, category, filename, token)
+        VALUES (?, ?, ?, ?, ?, ?)
+    ''', (name, title, description, category, filename, token))
+    conn.commit()
+    conn.close()
+
+    return jsonify({'message': 'File uploaded successfully', 'token': token})
+
+@app.route('/retrieve/<token>', methods=['GET'])
+def retrieve_file(token):
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM uploads WHERE token=?', (token,))
+    row = cursor.fetchone()
+    conn.close()
+
+    if row:
+        return jsonify({
+            'name': row[1],
+            'title': row[2],
+            'description': row[3],
+            'category': row[4],
+            'filename': row[5],
+            'token': row[6]
+        })
+
+    return jsonify({'message': 'Token not found'}), 404
+
+def secure_filename(filename):
+    # Replace spaces with underscores
+    filename = filename.replace(' ', '_')
+    # Remove special characters
+    filename = re.sub(r'[^\w.-]', '', filename)
+    return filename
 
 if __name__ == '__main__':
+    init_db()
     app.run(debug=True)

@@ -1042,15 +1042,3 @@ footer{
     opacity: 4.;
     font-weight: 200;
 }
-
-
-.line-blur {
-    position: absolute;
-    top: 50%; /* Adjust to position the line */
-    left: 0;
-    width: 100%; /* Ensure it covers the entire container */
-    height: 2px; /* Adjust the height of the line */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0)); /* Use a gradient to create a soft edge */
-    filter: blur(5px); /* Apply the blur effect */
-    transform: translateY(-50%); /* Center the line vertically */
-}

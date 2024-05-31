@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniWork</title>
     <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="/preloader.css">
-    <link rel="stylesheet" href="aboutsection.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/UniWork/preloader.css">
+    <link rel="stylesheet" href="/UniWork/aboutsection.css">
+    <link rel="stylesheet" href="/UniWork/css/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style type="text/css">
         body, #hero {
             min-height: 100vh;
+        }
+        footer {
+            display: none; 
+        }
+        .show-footer {
+            display: block; 
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,7 +163,8 @@
                     <a href="#">[ Scroll ]</a>
                 </div>
             </div>
-            <section class="abt-1">
+        </section>
+        <section class="abt-1">
                 <!-- background blur -->
                 <div class="backblur"></div>
                 <div class="head1">
@@ -168,11 +175,12 @@
                     </p>
                 </div>
                 <p class="a4 reveal"><span class="dot">⦿</span>Service</p>
-            </section>
+        </section>
             <!-- <div class="header1"> 
                 <p>Scroll to reveal</p>
                 <p>UniWork</p>
             </div>   -->
+        <section>
             <div class="container1">
                 <div class="row" id="row-1">
                     <div class="col">
@@ -249,54 +257,63 @@
                 <div class="whitespace"></div>
             </div>
             </div>
-    <!-- footer -->
-    <footer class="ftr">
-        <div class="footer-content">
-            <h3>Uni<span>Work</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, aperiam.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2024. designed by <span>ishubtripathi</span></p>
-        </div>
-    </footer>
         </section>
         <!-- services attitude -->
-        
-    </div>
     <!-- footer -->
-    <footer class="ftr">
-        <div class="footer-content">
-            <h3>Code opacity</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, aperiam.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
+    
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/images/logo/footer_logo.png" alt="Footer Logo">
+                <h3>UniWork</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2024. designed by <span>ishubtripathi</span></p>
-        </div>
-    </footer>
+    </footer>w
+
     <!-- about -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('site-footer');
+            if (isScrolledToBottom() && !isFirstPage()) {
+                footer.classList.add('show-footer');
+            } else {
+                footer.classList.remove('show-footer');
+            }
+        });
+
+        function isScrolledToBottom() {
+            return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+        }
+
+        function isFirstPage() {
+            return window.scrollY === 0;
+        }
+    </script>
     <script src="navscript.js"></script>
-    <script src="/particle/particles.js"></script>
-    <script src="/particle/app.js"></script>
-    <script src="/js/home.js"></script>
-    <script src="/js/scroll-reveal.js"></script>
+    <script src="/UniWork/particle/particles.js"></script>
+    <script src="/UniWork/particle/app.js"></script>
+    <script src="/UniWork/js/home.js"></script>
+    <script src="/UniWork/js/scroll-reveal.js"></script>
     <!-- <script src="/js/preloader.js"></script> -->
     <!-- linked javascripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>  
+    
 </body>
 </html>

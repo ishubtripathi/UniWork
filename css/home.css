@@ -5,9 +5,22 @@
     overscroll-behavior-y: contain;
 } */
 
-html, body {
+body {
+    margin: 0;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh; /* Ensure the body takes at least the height of the viewport */
+}
+.content {
+    flex: 1; /* Expand to fill remaining vertical space */
+}
+
+html {
     width: 100%;
     height: 100vh;
+    position: relative;
+    min-height: 100%;
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
 }
@@ -959,57 +972,62 @@ body.oa i.circle-tag:nth-of-type(2) {
     bottom: -40%;
 } */
 
-footer{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0px;
-    left: 0;
-    right: 0;
-    z-index: 6;
-    background: #111;
-    height: auto;
-    width: 100vw;
-    font-family: "Poppins" sans-serif;
-    letter-spacing: 0.5px;
-    padding-top: 40px;
-    color: #fff;
-}
-
-
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 30px; 
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.footer-content h3 span{
-    color: var(--themecolor);
-}
-
-.footer-content P{
-    padding-top: 10px;
-    max-width: 500px;
-    margin: 10px auto;
-    font-size: 14px;
-    line-height: 17px;
-}
 .socials{
     list-style: none;
     display: flex;
     align-items: center;
     margin: 1rem 0 3rem 0;
+}/* Footer Styles */
+#site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .socials li{
     margin: 0 10px;
 }
@@ -1024,25 +1042,6 @@ footer{
 .socials a:hover{
     color: var(--themecolor);
 }
-.footer-bottom{
-    background: #000;   
-    width: 100vw;
-    margin-top: -10px;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    color: var(--themecolor);
-    opacity: 4.;
-    font-weight: 200;
-}
-
 
 .line-blur {
     position: absolute;

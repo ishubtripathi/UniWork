@@ -5,8 +5,8 @@
     overscroll-behavior-y: contain;
 } */
 
-html, body {
-    width: 100%;
+body {
+    margin: 0;
     height: 100vh;
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
@@ -446,7 +446,7 @@ html, body {
 .head1 .p1{
     display: flex;
     margin-top: -12px;
-    justify-content: space-between;
+    justify-content: space;
     text-align: right;
     letter-spacing: 1px;
     font-size: 40px;
@@ -1041,4 +1041,63 @@ footer{
     color: var(--themecolor);
     opacity: 4.;
     font-weight: 200;
+}
+
+
+/* section scroll  */
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+    /* position: fixed; */
+}
+* {
+    box-sizing: border-box;
+}
+svg {
+    position: absolute;
+    top: 12em;
+    left: 10vw;
+    width: 50vw;
+}
+svg .mask {
+    width: 0;
+}
+.container1 {
+    display: flex;
+    width: 300vw;
+}
+.container1 .col {
+    display: flex;
+    gap: 3em;
+}
+.container1 .col p {
+    font-size: 0.8rem;
+}
+.container1 section {
+    width: 100vw;
+    padding: 20vw 10vw;
+}
+.container1 section h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.container1 section p {
+    font-size: 1.2rem;
+    width: 50vw;
+}
+.container1 section ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3em;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+}
+.container1 section ul li {
+    background: white;
+    border-radius: 0.3em;
+    flex-grow: 1;
+}
+section {
+    height: 100vh;
 }
